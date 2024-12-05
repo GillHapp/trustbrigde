@@ -1,0 +1,220 @@
+/* General Form Styling */
+.form {
+    max-height: 50vh;
+    padding: 2.5em;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+    backdrop-filter: blur(5px);
+}
+
+/* Form Layout */
+.form-views {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 2em;
+    height: auto;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    gap: 2em;
+    transition: all 0.4s ease-in-out;
+}
+
+.form-views:hover {
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
+}
+
+/* Form Elements */
+.form-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    padding-right: 2em;
+    border-right: 2px solid #e2e8f0;
+}
+
+.form-label {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5em 0;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Input Field */
+.form-input {
+    width: 75%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-input:active {
+    outline: none;
+    border: 2px solid #4a90e2;
+    box-shadow: 0px 4px 12px rgba(74, 144, 226, 0.5);
+}
+
+/* Buttons */
+.form-btn-submit,
+.form-btn-reset {
+    padding: 1em;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.form-btn-submit {
+    background: linear-gradient(90deg, #4a90e2, #8cb1b9);
+    color: #ffffff;
+}
+
+.form-btn-reset {
+    background-color: transparent;
+    border: 2px solid #8cb1b9;
+    color: #8cb1b9;
+}
+
+/* Hover Effects for Buttons */
+.form-btn-submit:hover {
+    background: linear-gradient(90deg, #8cb1b9, #4a90e2);
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(74, 144, 226, 0.5);
+}
+
+.form-btn-reset:hover {
+    background-color: #758576;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(117, 133, 118, 0.5);
+}
+
+/* Info Section */
+.info-section {
+    text-align: left;
+    width: 50%;
+    margin-bottom: 1em;
+    animation: fadeInRight 1s ease-out;
+}
+
+.info-section h1 {
+    text-decoration: underline;
+    font-size: 1.8rem;
+    color: #2d3748;
+    letter-spacing: 0.5px;
+}
+
+/* Form Overlay */
+.form-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.form-overlay-visible {
+    display: block;
+}
+
+/* Overlay Button */
+.overlay-btn {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    padding: 2em;
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-size: 1.2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Overlay Status */
+.overlay-status {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 760px) {
+    .form-views {
+        flex-direction: column;
+        gap: 2em;
+        padding: 1.5em;
+    }
+
+    .form-elements {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #e2e8f0;
+        padding: 0;
+    }
+
+    .info-section {
+        display: none;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

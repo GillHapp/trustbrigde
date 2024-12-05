@@ -1,0 +1,136 @@
+/* Dashboard Layout */
+.dashboard {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /* background: linear-gradient(180deg, #f8f9fa, #e9ecef); */
+    padding: 1.5em;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Dashboard Views */
+.dashboard-views {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #ffffff;
+    padding: 1em;
+    gap: 2em;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-views:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Dashboard Options */
+.dashboard-options {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 25%;
+    margin: 0;
+    padding: 1em;
+    background: linear-gradient(135deg, #4a90e2, #8cb1b9);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Dashboard Content */
+.dashboard-content {
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard Items */
+.option-item {
+    width: 100%;
+    margin-bottom: 1em;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Option Buttons */
+.option-btn {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #8cb1b9, #4a90e2);
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-btn:hover,
+.option-btn:focus {
+    background: linear-gradient(135deg, #4a90e2, #758576);
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 760px) {
+    .dashboard {
+        padding: 1em;
+    }
+
+    .dashboard-views {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .dashboard-options {
+        width: 100%;
+        padding: 1em;
+    }
+
+    .dashboard-content {
+        width: 100%;
+        padding: 1em;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
